@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="envelope-wrapper">
+        <div class="envelope">
+          <div class="letter">
+            <div class="text">
+              <strong>Dear Achalugo.</strong>
+              <p>
+                 Happy birthday Chikaosolu 💞💌 On this special day, I want to take a moment to celebrate not just your birthday but the incredible person you are.
+                  I’m happy for your presence in my life which has brought laughters and countless memories. Your unwavering support, your ability to get me out of a bad mood on tough days and your
+                   genuine love has actually left an impact on me. I’m reminded of the way we’ve grown and evolved together , you’ve been a source of inspiration and here’s to celebrating you , the one who knows and understands
+                    me a whole lot better than anyone else and has stuck by my side . May this year and always bring you boundless happiness, exciting opportunities and all the love you so rightfully deserve. Thank you for being an incredible friend , 
+                    I look to creating more memorable years ahead . I love you so much ❤️ . Happy birthday my ASA NWA💞    </p>
+                    <p class="sign"> Your Love, ife. </p>
+          </div>
+        </div>
+        <!-- <div class="heart"></div> -->
+      </div>
+      
+     
+    </div>
+    <div class="memoriesButt" id="memoriesButt">
+      <button onclick="NextPage()">Memories</button>
+    </div>
+    <script>
+      const envelope = document.querySelector(".envelope-wrapper");
+      const button = document.getElementById("memoriesButt")
+      envelope.addEventListener("click", () => {
+        envelope.classList.toggle("flap");
+        console.log("clicked")
+        button.style.opacity = 1
+      });
+
+      function NextPage() {
+    window.location.href="./memories.html"
+    }
+
+
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -9,7 +9,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+<!-- <link rel="manifest" href="/site.webmanifest"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -27,21 +30,26 @@
                     <p class="sign"> Your Love, ife. </p>
           </div>
         </div>
-        <!-- <div class="heart"></div> -->
-      </div>
+        <div></div>
+        <div class="heart1"></div>
+        <!-- <p class="call-to-action"> Click Me❤</p>
+      </div> -->
       
      
     </div>
     <div class="memoriesButt" id="memoriesButt">
-      <button onclick="NextPage()">Memories</button>
+      <button class="tap" id="tap">Tap the envelope</button>
+      <button class="MemButt" id="MemButt" onclick="NextPage()">Memories <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></button>
     </div>
     <script>
       const envelope = document.querySelector(".envelope-wrapper");
-      const button = document.getElementById("memoriesButt")
+      const button = document.getElementById("MemButt")
+      const button1 = document.getElementById("tap")
       envelope.addEventListener("click", () => {
         envelope.classList.toggle("flap");
         console.log("clicked")
-        button.style.opacity = 1
+        button.style.display = "flex";
+        button1.style.display ="none";
       });
 
       function NextPage() {

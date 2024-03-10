@@ -83,7 +83,7 @@ body {
   text-align: right;
   margin-right: 10px;
 }
-/* .heart {
+.heart1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -95,10 +95,9 @@ body {
   transition: transform 0.5s ease-in-out 1s;
   box-shadow: 0 1px 6px var(--shadow-color);
   cursor: pointer;
-
 }
-.heart:before,
-.heart:after {
+.heart1:before,
+.heart1:after {
   content: "";
   position: absolute;
   width: 15px;
@@ -106,12 +105,12 @@ body {
   background-color: var(--heart-color);
   border-radius: 50%;
 }
-.heart:before {
+.heart1:before {
   top: -7.5px;
 }
-.heart:after {
+.heart1:after {
   right: 7.5px;
-} */
+}
 .flap > .envelope:before {
   transform: rotateX(180deg);
   z-index: 0;
@@ -147,17 +146,51 @@ body {
   left: 0;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: 1.5s;
 }
-button {
+.MemButt {
   width: 150px;
   height: 40px;
   border-radius: 5px;
-  background-color: transparent;
+  background-color: white;
   border: 1px solid white;
-  color: white;
+  color: black;
   font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  animation: pulse 1.5s infinite;
+  font-family: "Poppins", sans-serif;
+  display: none;
+  transition: 1.5s;
+}
+.tap {
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+  }
 }
 .heart {
   position: fixed;
@@ -181,10 +214,24 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -1px;
 }
 
 @media only screen and (max-width: 600px) {
   video {
     width: 95%;
   }
+}
+
+.call-to-action {
+  position: absolute;
+  z-index: 10;
+  top: 80%;
+  left: 2%;
+  color: black;
+  background-color: white;
+  padding: 3px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  border-radius: 10px;
 }
